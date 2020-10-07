@@ -114,7 +114,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|Mod4Mask,              XK_q,      quit,           {0} },
 	{ MODKEY|Mod4Mask,              XK_o,      spawn,          SHCMD("/usr/bin/slimlock") },
 	{ MODKEY|Mod4Mask,              XK_p,      spawn,          SHCMD("/usr/bin/sysctl suspend") },
 };
