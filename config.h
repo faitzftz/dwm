@@ -55,6 +55,7 @@ static const Layout layouts[] = {
 	{ "HHH",      grid },
  	{ "[@]",      spiral },
  	{ "[\\]",      dwindle },
+	{ NULL,       NULL },
 };
 
 /* key definitions */
@@ -107,6 +108,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,			XK_Tab,    cyclelayout,    {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Tab,    cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
