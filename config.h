@@ -25,7 +25,8 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+/*static const char *tags[] = { "", "", "", "", "", "", "", "", "" };*/
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -121,6 +122,7 @@ static Key keys[] = {
 	{ MODKEY|Mod4Mask,              XK_r,      quit,           {1} },
 	{ MODKEY|Mod4Mask,              XK_o,      spawn,          SHCMD("/usr/bin/slimlock") },
 	{ MODKEY|Mod4Mask,              XK_p,      spawn,          SHCMD("/usr/bin/sysctl suspend") },
+        { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("$HOME/.local/bin/dmenuunicode") },
 };
 
 /* button definitions */
