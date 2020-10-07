@@ -93,8 +93,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,           XK_q,      quit,           {0} },
-        { MODKEY|ShiftMask,           XK_r,      quit,           {1} },
+	{ Mod4Mask|ShiftMask,           XK_q,      quit,           {0} },
+        { Mod4Mask|ShiftMask,           XK_r,      quit,           {1} },
 	/*	{ MODKEY|Mod4Mask,              XK_o,      spawn,          CMD("slimlock") },
 	{ MODKEY|Mod4Mask,              XK_p,      spawn,          CMD("systemctl suspend") },*/
 };
