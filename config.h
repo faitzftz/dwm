@@ -95,8 +95,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ Mod4Mask|ShiftMask,           XK_q,      quit,           {0} },
         { Mod4Mask|ShiftMask,           XK_r,      quit,           {1} },
-	/*	{ MODKEY|Mod4Mask,              XK_o,      spawn,          CMD("slimlock") },
-	{ MODKEY|Mod4Mask,              XK_p,      spawn,          CMD("systemctl suspend") },*/
+	{ MODKEY|Mod4Mask,              XK_o,      spawn,          SHCMD("/usr/bin/slimlock") },
+	{ MODKEY|Mod4Mask,              XK_p,      spawn,          SHCMD("/usr/bin/systemctl suspend") },
 };
 
 /* button definitions */
