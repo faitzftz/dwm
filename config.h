@@ -139,7 +139,7 @@ static Key keys[] = {
 	{ MODKEY|Mod4Mask,              XK_q,      quit,           {0} },
 	{ MODKEY|Mod4Mask,              XK_r,      quit,           {1} },
 	{ MODKEY|Mod4Mask,              XK_o,      spawn,          SHCMD("/usr/bin/slimlock") },
-	{ MODKEY|Mod4Mask,              XK_p,      spawn,          SHCMD("/usr/bin/sysctl suspend") },
+	{ MODKEY|Mod4Mask,              XK_p,      spawn,          SHCMD("systemctl suspend") },
         { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("$HOME/.local/bin/dmenuunicode") },
 };
 
