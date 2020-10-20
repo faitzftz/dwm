@@ -1544,7 +1544,6 @@ void
 runAutostart(void) {
 	system("cd ~/.dwm; ./autostart_blocking.sh");
 	system("cd ~/.dwm; ./autostart.sh &");
-	system("cd /usr/local/bin; ./dwmblocks &");
 }
 
 void
