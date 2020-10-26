@@ -141,6 +141,10 @@ static Key keys[] = {
 	{ MODKEY|Mod4Mask,              XK_o,      spawn,          SHCMD("slock") },
 	{ MODKEY|Mod4Mask,              XK_p,      spawn,          SHCMD("systemctl suspend") },
         { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("$HOME/.local/bin/dmenuunicode") },
+	{ MODKEY,			XK_minus,  spawn,	   SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_minus,  spawn,	   SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			XK_plus,  spawn,	   SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		XK_plus,  spawn,	   SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
 };
 
 /* button definitions */
@@ -150,9 +154,9 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button1,        spawn,          {.v = statuscmd } },
+	/*{ ClkStatusText,        0,              Button1,        spawn,          {.v = statuscmd } },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = statuscmd } },
-	{ ClkStatusText,        0,              Button3,        spawn,          {.v = statuscmd } },
+	{ ClkStatusText,        0,              Button3,        spawn,          {.v = statuscmd } }, */
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
