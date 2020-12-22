@@ -60,7 +60,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -140,7 +140,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|Mod4Mask,              XK_q,      quit,           {0} },
 	{ MODKEY|Mod4Mask,              XK_r,      quit,           {1} },
-	{ MODKEY|Mod4Mask,              XK_o,      spawn,          SHCMD("slock") },
+	{ MODKEY|Mod1Mask,              XK_o,      spawn,          SHCMD("slock") },
 	{ MODKEY|Mod4Mask,              XK_p,      spawn,          SHCMD("systemctl suspend") },
         { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("$HOME/.local/bin/dmenuunicode") },
 	{ MODKEY,			XK_minus,  spawn,	   SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
