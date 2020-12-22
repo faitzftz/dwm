@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 7;        /* border pixel of windows */
+static const unsigned int borderpx  = 5;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -22,7 +22,7 @@ static const char col_red[]	    = "#FF0000"; /*red*/
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2  },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_red  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_red    },
 };
 
 /* tagging */
