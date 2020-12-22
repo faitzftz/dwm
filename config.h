@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 7;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -13,15 +13,16 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const char *fonts[]          = {"monospace:size=10", "JoyPixels:pixelsize=14:antialias=true:autohint=true"};
 static const char dmenufont[]       = "monospace:size=12";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#191919"; /*#530470*/
+static const char col_gray1[]       = "#222222"; /*#222222*/
+static const char col_gray2[]       = "#444444"; /*#444444*/
+static const char col_gray3[]       = "#bbbbbb"; /*#bbbbbb*/
+static const char col_gray4[]       = "#eeeeee"; /*#eeeeee*/
+static const char col_cyan[]        = "#530470"; /*#191919#530470*/
+static const char col_red[]	    = "#FF0000"; /*red*/
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray2  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_red  },
 };
 
 /* tagging */
@@ -85,8 +86,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_Tab,      focusstack,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Tab,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_s,      swapfocus,      {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
@@ -117,8 +118,8 @@ static Key keys[] = {
 	/*{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },*/
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3]} },
-	{ MODKEY,			XK_Tab,    cyclelayout,    {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_Tab,    cyclelayout,    {.i = +1 } },
+	{ MODKEY,			XK_j,    cyclelayout,    {.i = -1 } },
+	{ MODKEY,		        XK_k,    cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
