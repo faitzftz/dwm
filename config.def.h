@@ -60,7 +60,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod4Mask
+#define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -86,8 +86,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_Tab,      focusstack,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_Tab,      focusstack,     {.i = -1 } },
+	{ MODKEY,                     XK_Tab,    focusstack,     {.i = +1 } },
+	{ MODKEY|ShiftMask,           XK_Tab,    focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_s,      swapfocus,      {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
@@ -113,7 +113,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	/*{ MODKEY,                       XK_Tab,    view,           {0} },*/
-	{ MODKEY,                       XK_w,      killclient,     {0} },
+	{ MODKEY|ShiftMask,             XK_w,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	/*{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },*/
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -140,7 +140,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|Mod4Mask,              XK_q,      quit,           {0} },
 	{ MODKEY|Mod4Mask,              XK_r,      quit,           {1} },
-	{ MODKEY|Mod1Mask,              XK_o,      spawn,          SHCMD("slock") },
+	{ MODKEY|Mod4Mask,              XK_o,      spawn,          SHCMD("slock") },
 	{ MODKEY|Mod4Mask,              XK_p,      spawn,          SHCMD("systemctl suspend") },
         { MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("$HOME/.local/bin/dmenuunicode") },
 	{ MODKEY,			XK_minus,  spawn,	   SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
